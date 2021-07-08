@@ -1,0 +1,30 @@
+# This is a server to update user profiles
+
+## Preliminary steps
+
+Install redis:
+```
+sudo apt update
+sudo apt install redis-server
+sudo nano /etc/redis/redis.conf
+sudo echo "supervised systemd" >> /etc/redis/redis.conf
+sudo systemctl restart redis.service
+```
+
+## Setup
+
+Run the setup file: setup_database.sh to insert a test uoser
+
+Example commands are in the commands.sh file
+
+# Documentation
+
+Profiles are stored in the first schema
+
+Sessions a stored in redis in the second shema and they expire after 10 minutes
+
+User and password are key and value respectively stored in the third schema
+
+
+Redis is used here so that you can replace it with a map to avoid setting up
+since this app is used for demonstrative purposes.

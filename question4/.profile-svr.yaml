@@ -1,0 +1,7 @@
+host: ""
+port: "8080"
+v: 5 
+dbHost: "localhost:6379"
+profilesSchema: "1"
+sessionsSchema: "2"
+usersSchema: "3"
